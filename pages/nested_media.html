@@ -1,0 +1,53 @@
+<!doctype html>
+<title>Nested Media</title>
+<style>
+  .media {
+    display: flex;
+    align-items: flex-start;
+    background: #e7dec4;
+    padding: 1em;
+    border-radius: 3px;
+    max-width: 30em;
+  }
+
+  .media-object {
+    margin-right: 2em;
+  }
+  .media-body {
+    flex: 1;
+  }
+  .media-heading {
+    margin: 0 0 .5em;
+  }
+  h3{
+      color: rgb(236, 83, 134);
+      font-weight: bolder;
+      font-style: italic;
+  }
+  body{
+      background-color: lightcyan;
+  }
+  p{
+      font-weight: bold;
+  }
+</style>
+<body>
+<div class="media">
+  <img class="media-object" src="../assets/1.jpg" alt="Sample photo">
+  <div class="media-body">
+    <h3 class="media-heading">Organically Synthesized</h3>
+    <p>Pizza is an Italian dish consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, 
+        and often various other ingredients (such as anchovies, mushrooms, onions, olives, pineapple, meat, etc.), which is then baked at 
+        a high temperature, traditionally in a wood-fired oven.</p>
+
+    <div class="media">
+      <img class="media-object" src="../assets/6.jpg" alt="Sample photo">
+      <div class="media-body">
+        <h3 class="media-heading">Eco Processing</h3>
+        <p>Holisticly predominate extensible testing procedures for reliable supply chains.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
