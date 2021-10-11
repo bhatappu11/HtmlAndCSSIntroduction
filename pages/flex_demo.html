@@ -1,91 +1,112 @@
 <!doctype html>
-<title>Example</title>
-<style>
-  * {
-    box-sizing: border-box; 
-  }
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: row;
-    margin: 0;
-  }
-  .outer-col-1 {
-    background: #aeeba3;
-    flex: 1;
-  }
-  .outer-col-2 {
-    display: flex;
-    flex-direction: column;
-    flex: 5;
-  }
-  .inner-row {
-    display: flex;
-    flex-direction: row;
-  }
-  .inner-col {
-    flex: 4;
-  }
-  .inner-row article {
-    min-height: 30vh;
-  }
-  .inner-row aside {
-    background: rgb(221, 187, 36);
-    flex: 1;
-  }
-  header, footer {
-    background: rgb(233, 90, 145);
-    height: 20vh;
-  }
-  header{
-    padding: 1em;
-    text-align:left;
-    text-decoration: solid;
-    font-size: xx-large;
-    text-shadow: 2px 2px 1px black;
-    font-weight: 800;
-  }
-  article {
-    padding: 10px;
-    margin: 10px;
-    background: aqua;
-}
-  footer, nav, aside {
-    padding: 1em;
-    font-weight: bolder;
-    font-size: 20px;
-  }
-</style>
+<head>
+  <title>BridgeLabz</title>
+  <link rel="shortcut icon" href="../assets/fav.png">
+  <style>
+    * {
+      box-sizing: border-box; 
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+    #main {
+      display: flex;
+      flex: 1;
+      background-color: bisque;
+    }
+    #main > article {
+      flex: 1;
+      order: 1;
+    }
+    #main > nav, 
+    #main > aside {
+      flex: 0 0 20vw;
+    }
+    #main > nav {
+      background: #eed875;
+      order: 3;
+    }
+    #main > aside {
+      background: rgb(236, 127, 145);
+      order: 2;
+    }
+    header, footer {
+      text-align: center;
+      background: rgb(193, 226, 128);
+      height: 20vh;
+      flex : 0 0 0;
+    }
+    header{
+      background: rgb(233, 156, 143);
+    }
+    header, footer, article, nav, aside {
+      padding: 1em;
+    }
+    h1{
+      font-size: 60px;
+      margin: 0;
+      padding: 20px 0;
+      color: rgb(3, 21, 80);
+      text-shadow: 3px 3px 2px rgb(190, 212, 253);
+    }
+    h2{
+      text-align: center;
+    }
+    article {
+      padding: 10px;
+      margin: 10px;
+      background: rgb(226, 226, 143);
+      font-size: 20px;
+    }
+    #nav > ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: #f59696;
+    } 
+    a{
+        color: rgb(13, 49, 148);
+        font-weight: bold;
+    }  
+    
+  </style>
+</head>
 <body>
-  <nav class="outer-col-1">Nav bar</nav>
-  <div class="outer-col-2">
-  	<header>Bridgelabz</header>
-    <div class="inner-row">
-      <div class="inner-col">
-    	<article><h2>First article</h2>
-            <p>A taco is a traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling. The tortilla is 
-               then folded around the filling and eaten by hand. A taco can be made with a variety of fillings, including beef, pork, chicken, seafood, 
-               beans, vegetables, and cheese, allowing for great versatility and variety. They are often garnished with various condiments, such as 
-               salsa, guacamole, or sour cream, and vegetables, such as lettuce, onion, tomatoes, and chiles. Tacos are a common form of antojitos, 
-               or Mexican street food, which have spread around the world.</p>
+  <header><h1>BridgeLabz is cool</h1> </header>
+  <div id="main">
+    <div>
+        <article> 
+          <p> At BridgeLabz, we're a techie community of</p>
+          <ul>
+              <li>Technologists</li>
+              <li>Thinkers</li>
+              <li>Builders</li>
+          </ul>
         </article>
         <article>
-            <h2>Second article</h2>
-            <p>Pizza is an Italian dish consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, 
-                and often various other ingredients (such as anchovies, mushrooms, onions, olives, pineapple, meat, etc.), which is then baked at 
-                a high temperature, traditionally in a wood-fired oven.[1] A small pizza is sometimes called a pizzetta. A person who makes pizza 
-                is known as a pizzaiolo.</p>
+          <p>Working togther to keep the tech Employability of Engineers alive and accessible, so Tech Companies worldwide can get
+            contributors and creators for Technology Solutions. We beleive this act of human collaboration across an Employability
+            platform is essential to individual growth and our collective future.</p>
+            <p> To know about us, visit <a href="https://www.bridgelabz.com/">BridgeLabz</a> to learn even more about our mission i.e
+               <strong>Employability to all</strong></p>
         </article>
-        <article>
-            <h2>Third article</h2>
-            <p> A taco is a traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling. The tortilla is 
-                then folded around the filling and eaten by hand. A taco can be made with a variety of fillings, including beef, pork, chicken, seafood, 
-                beans, vegetables, and cheese, allowing for great versatility and variety. They are often garnished with various condiments, such as 
-                salsa, guacamole, or sour cream, and vegetables, such as lettuce, onion, tomatoes, and chiles. Tacos are a common form of antojitos, 
-                or Mexican street food, which have spread around the world.</p></article>
-  		<footer>Footer</footer>
-      </div>
-    	<aside>Side bar</aside>
     </div>
+    <nav id="nav">
+      <h2>Navigation Bar</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </nav>
+    <aside>
+      <img src="../assets/BL_logo_square_jpg.jpg" alt="Hover Text" width = "100%">
+      <h2>Aside</h2>
+    </aside>
   </div>
+  <footer><h2>Footer</h2></footer>
 </body>
